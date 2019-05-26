@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js" ></script>	
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Biblioteca Monte Chingolo</title>
+</head>
+<body>
+    <div class="contenedor">
+        <header class="cabecera">
+                <h1>SCANNER QR</h1>
+        </header>
+
+        <section class="scanner">
+            <video class="scan" id="scanner"></video>
+            <div class="dibujo-scanner laser-leftTop" style="opacity: 0.5;"></div>
+            <div class="dibujo-scanner laser-leftBottom" style="opacity: 0.5;"></div>
+            <div class="dibujo-scanner laser-rightTop" style="opacity: 0.5;"></div>
+            <div class="dibujo-scanner laser-rightBottom" style="opacity: 0.5;"></div>
+        </section>
+
+        <footer class="pie">
+                <p>Desarrolladores: ... - Practicas Pre-Profesionales - Lic. en Sistemas - UNLa</p>
+        </footer>
+    </div>
+    <script>
+            let scanner = new Instascan.Scanner(
+                {
+                    video: document.getElementById('scanner')
+                }
+            );
+            scanner.addListener('scan', function(content) {
+                window.location=content;
+            });
+            Instascan.Camera.getCameras().then(cameras => 
+            {
+                if(cameras.length > 0){
+                    scanner.start(cameras[1]);
+                } else {
+                    console.error("No se encontro ninguna camara en el dispositivo!");
+                }
+            });
+    </script>
+</body>
+</html>

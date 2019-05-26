@@ -1,0 +1,72 @@
+
+//slide de imagenes************    
+.contenedor .fotos
+    grid-area: fotos
+    .slides
+        background: $color-principal
+        width: 100%
+        img
+            width: 100%
+ 
+.slidesjs-navigation
+    background: $color-principal
+    color: #fff
+    text-decoration: none
+    display: inline-block
+    padding: 11.5px 20px
+    float: right
+    &:hover
+        background: $color-terciario
+//fin slide de imagenes*************
+
+
+// galeria de videos****************
+.contenedor .videos
+    grid-area: videos
+    width: 90%
+    .reproduccion,
+    .lista
+        width: 100%
+        vertical-align: top
+        display: inline-block
+        margin: auto
+        height: 80%
+        background: $color-secundario
+    .lista
+        height: 19%
+        background: $color-secundario
+        .lista-videos
+            width: 100%
+            height: 120px
+    .reproduccion
+        .video
+            width: 100%
+            height: 500px
+
+.miniatura
+    width: 100%
+    height: 115px
+    position: relative
+    overflow: hidden
+    .imgvideo
+        width: 100%
+        height: 120px
+    .capa-transparente
+        display: block
+        position: absolute
+        bottom: 0px
+        z-index: 10
+        background: rgba(0,0,0,.1)
+        width: 100%
+        height: 160px
+        padding: .5em
+
+.video-uno,
+.video-dos,
+.video-tres,
+.video-cuatro
+    width: 100%
+    display: block
+    margin: 1px auto
+    height: 160px
+//fin galeria de videos**************

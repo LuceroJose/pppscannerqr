@@ -1,0 +1,42 @@
+.contenedor .scanner
+    grid-area: scanner
+    width: 90%
+    height: 400px
+    .dibujo-scanner
+        position: relative
+        margin: auto auto
+        height: 30px
+        width: 30px
+    .laser-leftTop
+        top: -40%
+        left: -45%
+        border-top: solid red 5px
+        border-left: solid red 5px
+    .laser-leftBottom
+        bottom: -45%
+        left: -45%
+        border-bottom: solid red 5px
+        border-left: solid red 5px 
+    .laser-rightTop
+        top: -58%
+        right: -45%
+        border-top: solid red 5px
+        border-right: solid red 5px    
+    .laser-rightBottom
+        bottom: -28%
+        right: -45%
+        border-bottom: solid red 5px
+        border-right: solid red 5px  
+    
+.boton-scanner
+    color: $color-principal
+    background: transparent
+    border: 2px solid $color-principal
+    border-radius: 6px
+    float: none
+    text-align: center
+    display: block
+    &:hover
+        background-color: $color-principal
+        color: white
+

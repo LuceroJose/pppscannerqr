@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #BBBEC1;
+  color: #000;
+  font-family: "Roboto", sans-serif; }
+
+.contenedor {
+  width: 90%;
+  max-width: 1000px;
+  margin: 10px auto;
+  /*agrego el grid */
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(7, auto);
+  grid-template-areas: "cabecera" "cuerpo" "fotos" "videos" "scanner" "boton-scanner" "pie"; }
+
+.contenedor > div,
+.contenedor .cabecera,
+.contenedor .cuerpo,
+.contenedor .pie,
+.contenedor .fotos,
+.contenedor .videos,
+.contenedor .scanner,
+.contenedor .boton-scanner {
+  width: 90%;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 6px; }
+
+.contenedor .cabecera {
+  text-align: center;
+  background: #C10303;
+  color: #ffffff;
+  grid-area: cabecera; }
+
+.contenedor .cuerpo {
+  grid-area: cuerpo; }
+
+.contenedor .fotos {
+  grid-area: fotos; }
+  .contenedor .fotos .slides {
+    background: #C10303;
+    width: 100%; }
+    .contenedor .fotos .slides img {
+      width: 100%; }
+
+.slidesjs-navigation {
+  background: #C10303;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 11.5px 20px;
+  float: right; }
+  .slidesjs-navigation:hover {
+    background: #7A0101; }
+
+.contenedor .videos {
+  grid-area: videos;
+  width: 90%; }
+  .contenedor .videos .reproduccion,
+  .contenedor .videos .lista {
+    width: 100%;
+    vertical-align: top;
+    display: inline-block;
+    margin: auto;
+    height: 80%;
+    background: #ffffff; }
+  .contenedor .videos .lista {
+    height: 19%;
+    background: #ffffff; }
+    .contenedor .videos .lista .lista-videos {
+      width: 100%;
+      height: 120px; }
+  .contenedor .videos .reproduccion .video {
+    width: 100%;
+    height: 500px; }
+
+.miniatura {
+  width: 100%;
+  height: 115px;
+  position: relative;
+  overflow: hidden; }
+  .miniatura .imgvideo {
+    width: 100%;
+    height: 120px; }
+  .miniatura .capa-transparente {
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 160px;
+    padding: 0.5em; }
+
+.video-uno,
+.video-dos,
+.video-tres,
+.video-cuatro {
+  width: 100%;
+  display: block;
+  margin: 1px auto;
+  height: 160px; }
+
+.contenedor .pie {
+  grid-area: pie;
+  background: #C10303;
+  color: #ffffff;
+  font-size: 18px; }
+
+.contenedor .scanner {
+  grid-area: scanner;
+  width: 90%;
+  height: 400px; }
+  .contenedor .scanner .dibujo-scanner {
+    position: relative;
+    margin: auto auto;
+    height: 30px;
+    width: 30px; }
+  .contenedor .scanner .laser-leftTop {
+    top: -40%;
+    left: -45%;
+    border-top: solid red 5px;
+    border-left: solid red 5px; }
+  .contenedor .scanner .laser-leftBottom {
+    bottom: -45%;
+    left: -45%;
+    border-bottom: solid red 5px;
+    border-left: solid red 5px; }
+  .contenedor .scanner .laser-rightTop {
+    top: -58%;
+    right: -45%;
+    border-top: solid red 5px;
+    border-right: solid red 5px; }
+  .contenedor .scanner .laser-rightBottom {
+    bottom: -28%;
+    right: -45%;
+    border-bottom: solid red 5px;
+    border-right: solid red 5px; }
+
+.boton-scanner {
+  color: #C10303;
+  background: transparent;
+  border: 2px solid #C10303;
+  border-radius: 6px;
+  float: none;
+  text-align: center;
+  display: block; }
+  .boton-scanner:hover {
+    background-color: #C10303;
+    color: white; }
+
+/*# sourceMappingURL=estilos.css.map */
