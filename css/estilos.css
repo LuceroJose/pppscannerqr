@@ -46,7 +46,8 @@ body {
     background: #C10303;
     width: 100%; }
     .contenedor .fotos .slides img {
-      width: 100%; }
+      width: 100%;
+      height: 100%; }
 
 .slidesjs-navigation {
   background: #C10303;
@@ -86,7 +87,7 @@ body {
   overflow: hidden; }
   .miniatura .imgvideo {
     width: 100%;
-    height: 120px; }
+    height: 100%; }
   .miniatura .capa-transparente {
     display: block;
     position: absolute;
