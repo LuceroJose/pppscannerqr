@@ -4,29 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos.css">
-    <title>Biblioteca Monte Chingolo</title>
+    <title>Document</title>
 </head>
 <body>
+    
     <div class="contenedor">
-        <header class="cabecera">
-            <h1>Biblioteca Monte Chingolo</h1>
+        <header class="shadow">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="modal" data-target="#escaner">Escanear QR</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </header>
 
-        <main class="cuerpo">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero reiciendis, consequatur eligendi ea corporis sunt ad optio dolores dolor excepturi quia repudiandae cumque, amet nostrum. Officia eveniet itaque ipsum aut.</p>
-            <br></br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat aliquid adipisci ipsa, inventore cum laboriosam possimus, libero culpa temporibus impedit quo autem incidunt! Corporis sequi, aspernatur at sed nobis molestiae.</p>
-            <br></br>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor laborum nulla ab, commodi perferendis, sunt voluptatibus nobis iure blanditiis amet molestiae est exercitationem? Expedita fugiat, eum nisi quae sapiente enim.</p>
-            <br></br>
-        </main>
+        <div class="contenido">
+            <div class="modal" tabindex="-1" role="dialog" id="escaner">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <p>Para poder escanear el Codigo QR acerque la camara al mismo</p>
+                        <video id="preview" width="100%" height="360"></video>
+                        <div class="dibujo-scanner laser-leftTop" style="opacity: 0.5;"></div>
+                        <div class="dibujo-scanner laser-leftBottom" style="opacity: 0.5;"></div>
+                        <div class="dibujo-scanner laser-rightTop" style="opacity: 0.5;"></div>
+                        <div class="dibujo-scanner laser-rightBottom" style="opacity: 0.5;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <a class="boton-scanner" href="scanner.html">Scanear QR</a>
+        <div class="cuerpo">
+            <div class="card text-center shadow">
+                <div class="card-header shadow">
+                    Bienvenidos al Museo de la Biblioteca Monte Chingolo
+                </div>
+                <div class="card-body shadow">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quisquam facere veritatis? Temporibus quisquam similique animi velit, eligendi repudiandae blanditiis a nisi dolores odio. Distinctio esse culpa dolorem pariatur repellendus.</p>
+                </div>
+            </div>
+        </div>
 
-        <footer class="pie">
-            <p>Desarrolladores: ... - Practicas Pre-Profesionales - Lic. en Sistemas - UNLa</p>
+        <div class="contacto shadow">
+            <h3>Acerca de Nosotros</h3>
+            <p></p>
+            <p>La Biblioteca Popular Monte Chingolo abre sus puertas a la comunidad desde noviembre de 2002 con una oferta cultural y educativa que busca ser una herramienta de transformación social. El Museo Histórico de Monte Chingolo fue inaugurado en
+                noviembre de 2017 y es construido a partir de material ferroviario abandonado que fue preservado por los vecinos de la biblioteca y desarrollado junto al área de Patrimonio Histórico de la UNLa para que sea un espacio de construcción de
+                la memoria colectiva y una herramienta educativa para todas las escuelas del barrio</p>
+            <table>
+                <tr>
+                    <h6>Dirección:</h6>
+                    <p>General Pinto 4752 - Monte Chingolo</p>
+                </tr>
+                <tr>
+                    <h6>Teléfono:</h6>
+                    <p>011-6089-3329</p>
+                </tr>
+                <tr>
+                    <h6>Sitio web:</h6>
+                    <p>bpmontechingolo.com.ar</p>
+                </tr>
+                <tr>
+                    <h6>Horario:</h6>
+                    <p>Lunes a Viernes: 10:00-16:00</p>
+                </tr>
+            </table>
+        </div>
+
+        <footer class="shadow">
+            <span>@2019 Todos los Derechos Reservados</span>
         </footer>
+
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+    <script type="text/javascript" src="js/funciones.js"></script>
 </body>
 </html>

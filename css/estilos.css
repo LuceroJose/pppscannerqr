@@ -3,159 +3,150 @@
   padding: 0; }
 
 body {
-  background: #BBBEC1;
-  color: #000;
-  font-family: "Roboto", sans-serif; }
+  background-color: #fff;
+  color: black; }
 
 .contenedor {
   width: 90%;
-  max-width: 1000px;
-  margin: 10px auto;
-  /*agrego el grid */
+  max-width: 1980px;
+  margin: 20px auto;
   display: grid;
-  grid-gap: 15px;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(7, auto);
-  grid-template-areas: "cabecera" "cuerpo" "fotos" "videos" "scanner" "boton-scanner" "pie"; }
+  grid-gap: 20px;
+  border-radius: 4px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, auto);
+  justify-content: space-evenly; }
 
 .contenedor > div,
-.contenedor .cabecera,
+.contenedor footer,
 .contenedor .cuerpo,
-.contenedor .pie,
-.contenedor .fotos,
+.contenedor .imagenes,
 .contenedor .videos,
-.contenedor .scanner,
-.contenedor .boton-scanner {
-  width: 90%;
-  background: #ffffff;
-  padding: 15px;
-  border-radius: 6px; }
+.contenedor .contacto {
+  padding: 20px; }
 
-.contenedor .cabecera {
-  text-align: center;
-  background: #C10303;
-  color: #ffffff;
-  grid-area: cabecera; }
-
-.contenedor .cuerpo {
-  grid-area: cuerpo; }
-
-.contenedor .fotos {
-  grid-area: fotos; }
-  .contenedor .fotos .slides {
-    background: #C10303;
-    width: 100%; }
-    .contenedor .fotos .slides img {
-      width: 100%;
-      height: 100%; }
-
-.slidesjs-navigation {
-  background: #C10303;
+a {
   color: #fff;
-  text-decoration: none;
-  display: inline-block;
-  padding: 11.5px 20px;
-  float: right; }
-  .slidesjs-navigation:hover {
-    background: #7A0101; }
+  text-align: center; }
 
-.contenedor .videos {
-  grid-area: videos;
-  width: 90%; }
-  .contenedor .videos .reproduccion,
-  .contenedor .videos .lista {
-    width: 100%;
-    vertical-align: top;
-    display: inline-block;
-    margin: auto;
-    height: 80%;
-    background: #ffffff; }
-  .contenedor .videos .lista {
-    height: 19%;
-    background: #ffffff; }
-    .contenedor .videos .lista .lista-videos {
-      width: 100%;
-      height: 120px; }
-  .contenedor .videos .reproduccion .video {
-    width: 100%;
-    height: 300px; }
+h3, h5, p {
+  text-align: center; }
 
-.miniatura {
-  width: 100%;
-  height: 115px;
-  position: relative;
-  overflow: hidden; }
-  .miniatura .imgvideo {
-    width: 100%;
-    height: 100%; }
-  .miniatura .capa-transparente {
-    display: block;
-    position: absolute;
-    bottom: 0px;
-    z-index: 10;
-    background: rgba(0, 0, 0, 0.1);
-    width: 100%;
-    height: 160px;
-    padding: 0.5em; }
+.boton {
+  padding: 20px;
+  text-align: center; }
 
-.video-uno,
-.video-dos,
-.video-tres,
-.video-cuatro {
-  width: 100%;
-  display: block;
-  margin: 1px auto;
-  height: 160px; }
+.dibujo-scanner {
+  position: absolute;
+  margin-top: 70px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  height: 30px;
+  width: 30px; }
 
-.contenedor .pie {
-  grid-area: pie;
-  background: #C10303;
-  color: #ffffff;
-  font-size: 18px; }
+.laser-leftTop {
+  top: 0;
+  left: 0;
+  border-top: solid red 5px;
+  border-left: solid red 5px; }
 
-.contenedor .scanner {
-  grid-area: scanner;
-  width: 90%;
-  height: 400px; }
-  .contenedor .scanner .scan {
-    width: 100%;
-    height: 400px; }
-  .contenedor .scanner .dibujo-scanner {
-    position: relative;
-    margin: auto auto;
-    height: 30px;
-    width: 30px; }
-  .contenedor .scanner .laser-leftTop {
-    top: -100%;
-    left: -36%;
-    border-top: solid red 5px;
-    border-left: solid red 5px; }
-  .contenedor .scanner .laser-leftBottom {
-    bottom: 20%;
-    left: -36%;
-    border-bottom: solid red 5px;
-    border-left: solid red 5px; }
-  .contenedor .scanner .laser-rightTop {
-    top: -117%;
-    right: -36%;
-    border-top: solid red 5px;
-    border-right: solid red 5px; }
-  .contenedor .scanner .laser-rightBottom {
-    bottom: 37%;
-    right: -36%;
-    border-bottom: solid red 5px;
-    border-right: solid red 5px; }
+.laser-leftBottom {
+  bottom: 0;
+  left: 0;
+  border-bottom: solid red 5px;
+  border-left: solid red 5px; }
 
-.boton-scanner {
-  color: #C10303;
-  background: transparent;
-  border: 2px solid #C10303;
-  border-radius: 6px;
-  float: none;
-  text-align: center;
-  display: block; }
-  .boton-scanner:hover {
-    background-color: #C10303;
-    color: white; }
+.laser-rightTop {
+  top: 0;
+  right: 0;
+  border-top: solid red 5px;
+  border-right: solid red 5px; }
+
+.laser-rightBottom {
+  bottom: 0;
+  right: 0;
+  border-bottom: solid red 5px;
+  border-right: solid red 5px; }
+
+header {
+  background: #37474F;
+  color: #fff;
+  grid-column-start: 1;
+  grid-column-end: -1; }
+
+nav {
+  background: #37474F; }
+  nav a:hover {
+    background-color: #90A4AE; }
+
+.cuerpo {
+  grid-column: span 4; }
+  .cuerpo .card .card-header {
+    background: #546E7A;
+    color: #fff; }
+  .cuerpo .card .card-footer {
+    background: #90A4AE; }
+
+.imagenes {
+  grid-column: span 4; }
+  .imagenes .card .card-header {
+    background: #546E7A;
+    color: #fff; }
+  .imagenes .card .card-footer {
+    background: #90A4AE; }
+
+.videos {
+  grid-column: span 4; }
+  .videos .card .card-header {
+    background: #546E7A;
+    color: #fff; }
+  .videos .card .card-footer {
+    background: #90A4AE; }
+
+footer {
+  background: #546E7A;
+  color: #fff;
+  grid-column: span 4;
+  text-align: center; }
+
+.contacto {
+  background: #90A4AE;
+  color: #fff;
+  grid-column: span 4;
+  text-align: center; }
+
+@media (max-width: 768px) {
+  .contenedor {
+    grid-column-start: 1;
+    grid-column-end: -1; }
+    .contenedor .imagenes {
+      grid-column-start: 1;
+      grid-column-end: -1; }
+      .contenedor .imagenes .card .card-header {
+        background: #546E7A;
+        color: #fff; }
+      .contenedor .imagenes .card .card-footer {
+        background: #90A4AE; }
+    .contenedor .eventos {
+      grid-column-start: 1;
+      grid-column-end: -1; }
+      .contenedor .eventos .card .card-header {
+        background: #546E7A;
+        color: #fff; }
+      .contenedor .eventos .card .card-body {
+        max-width: 100%;
+        height: auto; }
+      .contenedor .eventos .card .card-footer {
+        background: #90A4AE; }
+
+  .videos {
+    grid-column-start: 1;
+    grid-column-end: -1; }
+    .videos .card .card-header {
+      background: #546E7A;
+      color: #fff; }
+    .videos .card .card-footer {
+      background: #90A4AE; } }
 
 /*# sourceMappingURL=estilos.css.map */
