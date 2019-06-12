@@ -22,6 +22,7 @@ body {
 .contenedor .cuerpo,
 .contenedor .imagenes,
 .contenedor .videos,
+.contenedor .lista,
 .contenedor .contacto {
   padding: 20px; }
 
@@ -84,13 +85,19 @@ nav {
   nav a:hover {
     background-color: #90A4AE; }
 
-.cuerpo {
+.cuerpo,
+.lista {
   grid-column: span 4; }
-  .cuerpo .card .card-header {
+  .cuerpo .card .card-header,
+  .lista .card .card-header {
     background: #546E7A;
     color: #fff; }
-  .cuerpo .card .card-footer {
+  .cuerpo .card .card-footer,
+  .lista .card .card-footer {
     background: #90A4AE; }
+  .cuerpo img,
+  .lista img {
+    width: 90%; }
 
 .imagenes {
   grid-column: span 4; }

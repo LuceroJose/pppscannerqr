@@ -18,11 +18,19 @@ $( document ).ready(function(){
 });
 /******************************/
 
-
-//Lista de visitados
-function listado(){
+//Listar Muestras
+function listar(nombreObjeto){
+    var encontrado = false;
     for(var i=0; i<sessionStorage.length; i++){
-        var nombre = sessionStorage.key(i);
-        console.log(nombre);
+        if(nombreObjeto === sessionStorage.key(i).slice(0,-5)){
+            encontrado = true;
+        }   
     }
+    if (encontrado) {
+        var codigoHtml = "<p>&#10004 "+nombreObjeto+"</p>";
+    } else {
+        var codigoHtml = "<p>&#10006 "+nombreObjeto+"</p>";
+    }
+    document.getElementById(nombreObjeto).innerHTML = codigoHtml;
 }
+/*******************************/
