@@ -26,7 +26,7 @@
                             <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-toggle="modal" data-target="#escaner">Escanear QR</a>
+                            <a class="nav-link" href="escaner.html">Escanear QR</a>
                         </li>
                     </ul>
                 </div>
@@ -84,32 +84,34 @@
             </div>
         </div>
 
-        <div class="contenido">
-            <div class="modal" tabindex="-1" role="dialog" id="escaner">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <p>Para poder escanear el Codigo QR acerque la camara al mismo</p>
-                        <video id="preview"></video>
-                        <div class="dibujo-scanner laser-leftTop" style="opacity: 0.5;"></div>
-                        <div class="dibujo-scanner laser-leftBottom" style="opacity: 0.5;"></div>
-                        <div class="dibujo-scanner laser-rightTop" style="opacity: 0.5;"></div>
-                        <div class="dibujo-scanner laser-rightBottom" style="opacity: 0.5;"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="lista">
             <div class="card text-center shadow">
                 <div class="card-header shadow">
                     Objetos visitados
                 </div>
                 <div class="card-body shadow">
-                    <p>&#10004 Muestras visitadas.     &#10006 Muestras No visitadas.</p>
-                    <div id="codexVaticanus"><script>listar("codexVaticanus")</script></div>
-                    <div id="gioconda"><script>listar("gioconda")</script></div>
-                    <div id="mascaraDeTutankamon"><script>listar("mascaraDeTutankamon")</script></div>
-                    <div id="piedraRosetta"><script>listar("piedraRosetta")</script></div>
+                    <div class="botones">
+                        <h5 class="btnVisto">Muestras que fueron Visitadas</h5>
+                        <h5 class="btnNoVisto">Muestras No Visitadas</h5>
+                    </div>
+                    <ul>
+                        <li id="codexVaticanus">
+                            <script>listar("codexVaticanus");</script>
+                            <h5>Codex Vaticanus</h5> 
+                        </li>
+                        <li id="gioconda">
+                            <script>listar("gioconda");</script>
+                            <h5>La Gioconda</h5> 
+                        </li>
+                        <li id="mascaraDeTutankamon">
+                            <script>listar("mascaraDeTutankamon");</script>  
+                            <h5>La mascara de Tutankamon</h5> 
+                        </li>
+                        <li id="piedraRosetta">
+                            <script>listar("piedraRosetta");</script>
+                            <h5>La Piedra Rosetta</h5> 
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

@@ -1,20 +1,26 @@
 
 //CODIGO DEL SCANNER 
-$( document ).ready(function(){
+$( document ).ready(function escanear(){
     let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
     scanner.addListener('scan', function(content) {
         window.location=content;
         sessionStorage.setItem(content,"visitado");
     });
-    Instascan.Camera.getCameras().then(function(cameras) {
-        if (cameras.length > 0) {
-            scanner.start(cameras[0]);
-        } else {
-            console.error('No se encontro ninguna camara en el dispositivo!.');
-        }
-    }).catch(function(e) {
-        console.error(e);
-    });
+    if(document.getElementById('preview')!=null){
+        Instascan.Camera.getCameras().then(function(cameras) {
+            if (cameras.length > 0) {
+                if (cameras[1]==null) {
+                    scanner.start(cameras[0]);
+                } else {
+                    scanner.start(cameras[1]);
+                }
+            } else {
+                console.error('No se encontro ninguna camara en el dispositivo!.');
+            }
+        }).catch(function(e) {
+            console.error(e);
+        });
+    }
 });
 /******************************/
 
@@ -27,10 +33,12 @@ function listar(nombreObjeto){
         }   
     }
     if (encontrado) {
-        var codigoHtml = "<p>&#10004 "+nombreObjeto+"</p>";
+        //var codigoHtml = "<p>&#10004 "+nombreObjeto+"</p>";
+        document.getElementById(nombreObjeto).className = 'visto';
     } else {
-        var codigoHtml = "<p>&#10006 "+nombreObjeto+"</p>";
+        //var codigoHtml = "<p>&#10006 "+nombreObjeto+"</p>";
+        document.getElementById(nombreObjeto).className = 'noVisto';
     }
-    document.getElementById(nombreObjeto).innerHTML = codigoHtml;
+    //document.getElementById(nombreObjeto).innerHTML = codigoHtml;
 }
 /*******************************/
